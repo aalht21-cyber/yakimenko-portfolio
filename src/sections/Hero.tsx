@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import heroPhoto from '../assets/hero-photo.png'
+import { scrollToHash } from '../lib/scroll'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -125,6 +126,7 @@ export default function Hero() {
         </p>
         <a
           href="#contacts"
+          onClick={scrollToHash}
           className="mt-6 inline-block px-1 py-1 text-3xl font-extrabold lowercase transition-colors md:text-4xl"
           style={{ color: 'var(--red)' }}
           onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--red-bright)')}

@@ -1,3 +1,5 @@
+import { scrollToHash } from '../lib/scroll'
+
 const NAV = [
   { label: 'ПРОЕКТЫ', href: '#projects' },
   { label: 'УСЛУГИ', href: '#services' },
@@ -30,6 +32,7 @@ export default function Header() {
           <a
             key={item.href}
             href={item.href}
+            onClick={scrollToHash}
             className="pencil-link inline-block px-2 py-1 text-sm font-bold tracking-wide uppercase md:text-base lg:text-lg"
           >
             {item.label}

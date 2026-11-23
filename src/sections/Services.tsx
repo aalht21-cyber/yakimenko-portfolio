@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { scrollToHash } from '../lib/scroll'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -103,6 +104,7 @@ export default function Services() {
         <div className="mt-8 text-center md:mt-1">
           <a
             href="#contacts"
+            onClick={scrollToHash}
             className="inline-block border-2 border-[var(--ink)] px-8 py-4 text-lg font-extrabold tracking-wide uppercase transition-colors hover:bg-[var(--red)] hover:text-[var(--paper)] focus-visible:bg-[var(--red)] focus-visible:text-[var(--paper)]"
           >
             Обсудить задачу
